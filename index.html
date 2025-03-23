@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - iPortfolio Bootstrap Template</title>
+  <title>The YK's Archive</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -97,8 +97,8 @@
       <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Welcome to the YK's Archive</h2>
-        <p>I'm <span class="typed" data-typed-items="Creator, Designer, Developer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <h2>Welcome to the <br> YK's Archive</h2>
+        <p>I'm a<span class="typed" data-typed-items="Designer, Developer, Alpha Seeker">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -119,10 +119,9 @@
             <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 content">
-            <h2>UI/UX Designer &amp; Web Developer.</h2>
+            <h2>Alpha Seeker &amp; Developer</h2>
             <p class="fst-italic py-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              A lifelong passion to push innovation down to application
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -154,6 +153,7 @@
     </section><!-- /About Section -->
 
     <!-- Stats Section -->
+    <!----
     <section id="stats" class="stats section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -166,7 +166,7 @@
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
@@ -174,7 +174,7 @@
               <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
@@ -182,7 +182,7 @@
               <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item">
@@ -190,13 +190,14 @@
               <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
             </div>
-          </div><!-- End Stats Item -->
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Stats Section -->
+    </section>
+    -->
 
     <!-- Skills Section -->
     <section id="skills" class="skills section light-background">
@@ -827,16 +828,25 @@
 
 
   <script>
-    // Function to calculate age from birth year
-    function calculateAge(birthYear) {
-        const currentYear = new Date().getFullYear();
-        return currentYear - birthYear;
+    function calculateAge(birthDate) {
+    const today = new Date();
+    const birthDateObj = new Date(birthDate);
+    let age = today.getFullYear() - birthDateObj.getFullYear();
+    const monthDifference = today.getMonth() - birthDateObj.getMonth();
+    const dayDifference = today.getDate() - birthDateObj.getDate();
+
+    // Adjust age if the current date is before the birthdate
+    if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+        age--;
+    }
+
+    return age;
     }
 
     // Function to display age in the HTML
     function displayAge() {
-        const birthYear = 2006; // Replace with the actual birth year
-        const age = calculateAge(birthYear);
+        const birthDate = '2006-09-21'; // Birthdate in YYYY-MM-DD format
+        const age = calculateAge(birthDate);
         document.getElementById('age').textContent = age;
     }
 
