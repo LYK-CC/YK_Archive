@@ -1267,9 +1267,59 @@ section,
   color: var(--accent-color);
 }
 
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  margin-left: 10px;
+  border-left: 3px solid #007bff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -28px;
+  top: 0;
+  background-color: #fff;
+  border: 3px solid #007bff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 29px;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.timeline-content h4.title {
+  margin-bottom: 10px;
+}
+
+.timeline-content p.description {
+  margin-bottom: 15px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
 }
+
+
+
+
+
