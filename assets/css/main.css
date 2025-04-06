@@ -1312,6 +1312,31 @@ section,
 
 
 
+/* Resume section - switch to vertical stack */
+#resume .container .row {
+  display: block;
+}
+
+/* Resume items spacing */
+.resume .resume-item {
+  margin-bottom: 30px;
+}
+
+/* Optional: Indent bullet lists a bit more */
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+/* Optional: Add slight border or line to visually separate sections */
+.resume .resume-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0dcaf0; /* or your theme's primary color */
+  padding-bottom: 8px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
