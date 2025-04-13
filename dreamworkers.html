@@ -397,27 +397,44 @@
           but it captured something honest. As it was the beginning of something real. Not flashy. Not perfect.
           Just…real.</p>
 
-        <div
-          style="max-width: 560px; margin: 2em auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-          <a href="https://mp.weixin.qq.com/s/dUscq05aHimvyZql0othOw" target="_blank"
-            style="text-decoration: none; color: inherit;">
-            <div style="position: relative;">
-              <img src="/assets/dreamworkers/event-1.jpg" alt="Documentary Thumbnail"
-                style="width: 100%; display: block;">
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="#fff"
-                  style="filter: drop-shadow(0 0 6px rgba(0,0,0,0.6));">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+          <div class="container my-5">
+            <div class="card shadow-sm border-0" style="border-radius: 16px; overflow: hidden;">
+              <div class="card-header text-center bg-light" style="border-bottom: none;">
+                <h5 class="mb-0" style="font-weight: 600; color: #0dcaf0;">Event Documentary</h5>
+              </div>
+              <div class="position-relative" style="background: #000;">
+                <img src="/assets/dreamworkers/cover.jpg" alt="Video Cover" style="width: 100%; display: block;">
+                <button id="playVideo" class="btn btn-light position-absolute top-50 start-50 translate-middle px-4 py-2 rounded-pill shadow">
+                  ▶ Play
+                </button>
+              </div>
+              <div id="videoContainer" style="display: none;" class="ratio ratio-16x9">
+                <iframe
+                  id="biliPlayer"
+                  src=""
+                  allowfullscreen
+                  sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+                  style="border: none;"></iframe>
+              </div>
+              <div class="card-body text-center">
+                <p class="text-muted mb-0" style="font-size: 0.9em;">Released during China's Disability Awareness Week</p>
               </div>
             </div>
-            <div style="padding: 1em; background-color: #fff;">
-              <h4 style="margin: 0 0 0.4em;">Event Summary</h4>
-              <p style="margin: 0; color: #555;">Released during Disability Awareness Week, this short film captures the
-                beginning of Dreamworkers' very first event.</p>
-            </div>
-          </a>
-        </div>
+          </div>
+          
+          <script>
+            document.getElementById('playVideo').addEventListener('click', function () {
+              // 设置视频源
+              const iframe = document.getElementById('biliPlayer');
+              iframe.src = "//player.bilibili.com/player.html?aid=347931751&bvid=BV1iR4y1o7bS&cid=900218190&page=1&high_quality=1&danmaku=0";
+          
+              // 显示 iframe，隐藏封面
+              document.getElementById('videoContainer').style.display = 'block';
+              this.parentElement.style.display = 'none';
+            });
+          </script>
+          
+          
 
 
 
